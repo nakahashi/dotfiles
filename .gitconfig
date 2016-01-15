@@ -1,0 +1,9 @@
+[user]
+	email = nakahashi@users.noreply.github.com
+	name = nakahashi
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[core]
+	autoCRLF = false
