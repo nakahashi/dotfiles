@@ -1,29 +1,34 @@
-"""
-"" 表示設定
-"""
-colorscheme atom-dark
+""
+" 表示
+""
+" フォント
+set guifont=Ricty_Diminished:h11:cSHIFTJIS
 
-set guifont=Ricty\ Diminished\ Regular:h15
+" メニュー文字化け対策
+source $VIMRUNTIME/delmenu.vim
+set langmenu=ja_jp.utf-8
+source $VIMRUNTIME/menu.vim
 
-"""
-"" 日本語設定
-"""
-" 日本語入力ON時のカーソルの色を設定
-function CursolColor()
-  if has('multi_byte_ime') || has('xim')
+""
+" 日本語設定
+""
+function ConfigIME()
+  if has('multi_byte_ime') || has('xim') || has('gui_macvim')
+    " 日本語入力ON時のカーソルの色を設定
     hi Cursor guifg=NONE guibg=Green
     hi CursorIM guifg=NONE guibg=Purple
+
+    " 挿入モード/検索時にIME ON
+    set iminsert=1
+    set imsearch=1
+    inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
   endif
 endfunction
-call CursolColor()
+call ConfigIME()
 
-" 挿入モード終了時に IME 状態を保存しない
-inoremap <silent> <Esc> <Esc>
-inoremap <silent> <C-[> <Esc>
-
-"""
-"" ウィンドウサイズ保存
-"""
+""
+" ウィンドウサイズ保存
+""
 let g:save_window_file = expand('~/.vimwinpos')
 augroup SaveWindow
   autocmd!
@@ -40,10 +45,4 @@ augroup END
 if filereadable(g:save_window_file)
   execute 'source' g:save_window_file
 endif
-
-" 行間
-set lsp=1
-
-" Kaoriya版vimrcは以下設定で無効にすること
-" let plugin_cmdex_disable = 1
 
