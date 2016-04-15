@@ -1,7 +1,11 @@
 ""
 " プラグイン
 ""
-call plug#begin('~/.vim/plugged')
+if has('win32') || has('wind64')
+  call plug#begin('~/vimfiles/plugged')
+else
+  call plug#begin('~/.vim/plugged')
+endif
 
 " カラースキーマ
 Plug 'altercation/vim-colors-solarized'

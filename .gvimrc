@@ -3,6 +3,9 @@
 ""
 " フォント
 set guifont=Ricty_Diminished:h11:cSHIFTJIS
+if has('win32') || has('win64')
+  set renderoptions=type:directx,renmode:5
+endif
 
 " メニュー文字化け対策
 source $VIMRUNTIME/delmenu.vim
