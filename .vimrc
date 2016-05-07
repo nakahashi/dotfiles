@@ -13,27 +13,64 @@ Plug 'gosukiwi/vim-atom-dark'
 Plug 'jpo/vim-railscasts-theme'
 Plug 'tomasr/molokai'
 Plug 'sjl/badwolf'
-Plug 'vim-scripts/summerfruit256.vim'
+Plug 'jpo/vim-railscasts-theme'
 
 " EditorConfig
 Plug 'editorconfig/editorconfig-vim'
 
 " unite.vim
 Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimfiler.vim'
+Plug 'Shougo/neomru.vim'
+Plug 'Shougo/vimproc.vim'
 Plug 'ujihisa/unite-colorscheme'
+Plug 'w0ng/vim-hybrid'
 
 call plug#end()
 
 ""
+" unite.vim
+""
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_edit_action = 'tabopen'
+let g:unite_enable_ignore_case = 1
+let g:unite_enable_smart_case = 1
+let g:unite_enable_start_insert = 1
+
+noremap <silent> ,b :Unite buffer<CR>
+noremap <silent> ,h :Unite file_mru<CR>
+noremap <silent> ,f :VimFiler<CR>
+
+" grep検索
+nnoremap <silent> ,g  :<C-u>Unite -buffer-name=search grep:.<CR>
+
+" カーソル位置の単語をgrep検索
+nnoremap <silent> ,cg :<C-u>Unite -buffer-name=search grep:.<CR><C-R><C-W>
+
+" grep検索結果の再呼出
+nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
+
+" unite grep に ag(The Silver Searcher) を使う
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts =
+      \ '-i --vimgrep --hidden --ignore ' .
+      \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
 " カラースキーマ
 ""
 " set background=light
+set background=dark
 
 " colorscheme atom-dark-256
+" colorscheme molokai
 " colorscheme torte
 " colorscheme solarized
-" colorscheme summerfruit256
-colorscheme badwolf
+" colorscheme badwolf
+" colorscheme railscasts
+colorscheme hybrid
 
 ""
 " 動作設定
@@ -129,4 +166,7 @@ noremap gk k
 
 " 検索ワードハイライト解除
 nnoremap <C-l> :noh<CR>
+
+" 次のバッファ
+noremap <C-N> :bn<CR>
 

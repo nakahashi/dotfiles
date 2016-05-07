@@ -49,3 +49,11 @@ if filereadable(g:save_window_file)
   execute 'source' g:save_window_file
 endif
 
+""
+" unite.vim
+""
+" augroup TreeByStart
+"   autocmd!
+"   autocmd VimEnter * VimFilerExplorer -split -simple -winwidth=30 -no-quit
+" augroup END
+
