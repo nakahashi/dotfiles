@@ -32,7 +32,6 @@ call plug#end()
 " unite.vim
 ""
 let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_edit_action = 'tabopen'
 let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 let g:unite_enable_start_insert = 1
@@ -40,6 +39,7 @@ let g:unite_enable_start_insert = 1
 noremap <silent> ,b :Unite buffer<CR>
 noremap <silent> ,h :Unite file_mru<CR>
 noremap <silent> ,f :VimFiler<CR>
+noremap <silent> ,e :VimFilerExplore<CR>
 
 " grep検索
 nnoremap <silent> ,g  :<C-u>Unite -buffer-name=search grep:.<CR>
@@ -59,18 +59,22 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt = ''
 endif
 
+if has('mac')
+  let g:vimproc_dll_path = '~/.vim/plugged/vimproc.vim/lib/vimproc_mac.so'
+endif
+
 " カラースキーマ
 ""
-" set background=light
-set background=dark
+set background=light
+" set background=dark
 
 " colorscheme atom-dark-256
 " colorscheme molokai
 " colorscheme torte
-" colorscheme solarized
+colorscheme solarized
 " colorscheme badwolf
 " colorscheme railscasts
-colorscheme hybrid
+" colorscheme hybrid
 
 ""
 " 動作設定
@@ -169,4 +173,7 @@ nnoremap <C-l> :noh<CR>
 
 " 次のバッファ
 noremap <C-N> :bn<CR>
+
+" 連続ペースト
+vnoremap <silent> <C-p> "0p<CR>
 

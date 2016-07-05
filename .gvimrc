@@ -2,9 +2,11 @@
 " 表示
 ""
 " フォント
-set guifont=Ricty_Diminished:h11:cSHIFTJIS
 if has('win32') || has('win64')
+  set guifont=Ricty_Diminished:h13:cSHIFTJIS
   set renderoptions=type:directx,renmode:5
+elseif has('mac')
+  set guifont=RictyDiminished-Regular:h14
 endif
 
 " メニュー文字化け対策
