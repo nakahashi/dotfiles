@@ -38,7 +38,7 @@ let g:unite_enable_start_insert = 1
 
 noremap <silent> ,b :Unite buffer<CR>
 noremap <silent> ,h :Unite file_mru<CR>
-noremap <silent> ,f :VimFiler<CR>
+noremap <silent> ,f :Unite file_rec<CR>
 noremap <silent> ,e :VimFilerExplore<CR>
 
 " grep検索
@@ -173,7 +173,4 @@ nnoremap <C-l> :noh<CR>
 
 " 次のバッファ
 noremap <C-N> :bn<CR>
-
-" 連続ペースト
-vnoremap <silent> <C-p> "0p<CR>
 
