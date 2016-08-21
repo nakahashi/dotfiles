@@ -1,6 +1,8 @@
 ""
 " 表示
 ""
+colorscheme railscasts
+
 " フォント
 if has('win32') || has('win64')
   set guifont=Ricty_Diminished:h13:cSHIFTJIS

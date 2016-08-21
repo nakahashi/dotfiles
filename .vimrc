@@ -68,10 +68,11 @@ endif
 set background=light
 " set background=dark
 
+colorscheme default
 " colorscheme atom-dark-256
 " colorscheme molokai
 " colorscheme torte
-colorscheme solarized
+" colorscheme solarized
 " colorscheme badwolf
 " colorscheme railscasts
 " colorscheme hybrid
