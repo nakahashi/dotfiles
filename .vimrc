@@ -14,6 +14,7 @@ Plug 'jpo/vim-railscasts-theme'
 Plug 'tomasr/molokai'
 Plug 'sjl/badwolf'
 Plug 'jpo/vim-railscasts-theme'
+Plug 'raphamorim/lucario'
 
 " EditorConfig
 Plug 'editorconfig/editorconfig-vim'
@@ -25,6 +26,13 @@ Plug 'Shougo/neomru.vim'
 Plug 'Shougo/vimproc.vim'
 Plug 'ujihisa/unite-colorscheme'
 Plug 'w0ng/vim-hybrid'
+
+" rubocop
+Plug 'scrooloose/syntastic'
+
+" syntax
+Plug 'slim-template/vim-slim'
+Plug 'nathanaelkane/vim-indent-guides'
 
 call plug#end()
 
@@ -76,6 +84,12 @@ colorscheme default
 " colorscheme badwolf
 " colorscheme railscasts
 " colorscheme hybrid
+
+""
+" Rubocop
+""
+let g:syntastic_mode_map = { 'mode': 'passive', 'passive_filetypes': ['ruby'] }
+let g:syntastic_ruby_checkers = ['rubocop']
 
 ""
 " 動作設定
@@ -132,6 +146,9 @@ set ruler
 set nowrap
 set list
 set listchars=tab:^\ ,trail:-,nbsp:%,extends:>
+
+" vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
+let g:indent_guides_enable_on_vim_startup = 1
 
 " 対応するカッコを強調表示
 set showmatch
