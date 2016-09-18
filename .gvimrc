@@ -1,7 +1,7 @@
 ""
 " 表示
 ""
-colorscheme railscasts
+colorscheme lucario
 
 " フォント
 if has('win32') || has('win64')
