@@ -4,9 +4,11 @@
 colorscheme lucario
 
 " フォント
-if has('win32') || has('win64')
-  set guifont=Ricty_Diminished:h13:cSHIFTJIS
+if has('win64')
+  set guifont=Ricty_Diminished:h11:cSHIFTJIS
   set renderoptions=type:directx,renmode:5
+elseif has('win32')
+  set guifont=Ricty_Diminished:h12:cSHIFTJIS
 elseif has('mac')
   set guifont=RictyDiminished-Regular:h14
 endif
