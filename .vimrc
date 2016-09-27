@@ -69,6 +69,10 @@ endif
 
 if has('mac')
   let g:vimproc_dll_path = '~/.vim/plugged/vimproc.vim/lib/vimproc_mac.so'
+elseif has('win32')
+  let g:vimproc_dll_path = '~/vimfiles/plugged/vimproc.vim/autoload/vimproc_win32.dll'
+elseif has('win64')
+  let g:vimproc_dll_path = '~/vimfiles/plugged/vimproc.vim/autoload/vimproc_win64.dll'
 endif
 
 " カラースキーマ
