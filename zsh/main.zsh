@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # env
-PATH=/usr/local/bin:/usr/bin:/bin:/sbin:${PATH}
+PATH=/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin/:${PATH}
 export PATH
 export LANG=ja_JP.UTF-8
 

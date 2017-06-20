@@ -1,7 +1,13 @@
 ""
 " 表示
 ""
-colorscheme lucario
+" colorscheme lucario
+colorscheme summerfruit256
+" colorscheme lucius
+" :Unite -auto-preview colorscheme
+" colorscheme solarized
+" colorscheme github
+" colorscheme railscasts
 
 " フォント
 if has('win64')

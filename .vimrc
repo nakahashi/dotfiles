@@ -15,6 +15,8 @@ Plug 'tomasr/molokai'
 Plug 'sjl/badwolf'
 Plug 'jpo/vim-railscasts-theme'
 Plug 'raphamorim/lucario'
+Plug 'vim-scripts/summerfruit256.vim'
+Plug 'jonathanfilip/vim-lucius'
 
 " EditorConfig
 Plug 'editorconfig/editorconfig-vim'
@@ -24,8 +26,10 @@ Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim'
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/vimproc.vim'
-Plug 'ujihisa/unite-colorscheme'
 Plug 'w0ng/vim-hybrid'
+Plug 'ujihisa/unite-colorscheme'
+Plug 'albertorestifo/github.vim'
+" :Unite -auto-preview colorscheme
 
 " rubocop
 Plug 'scrooloose/syntastic'
