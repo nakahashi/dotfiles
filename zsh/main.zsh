@@ -14,8 +14,8 @@ export LANG=ja_JP.UTF-8
 case "$(uname)" in
   Darwin)
     if [[ -d /Applications/MacVim.app ]]; then
-      alias mvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/mvim "$@"'
-      alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+      alias mvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/bin/mvim "$@"'
+      alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/bin/Vim "$@"'
     fi
     ;;
   *) ;;

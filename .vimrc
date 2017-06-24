@@ -44,13 +44,22 @@ call plug#end()
 " unite.vim
 ""
 let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_safe_mode_by_default = 0
 let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 let g:unite_enable_start_insert = 1
 
+function! DispatchUniteFileRecAsyncOrGit()
+  if isdirectory(getcwd()."/.git")
+    Unite file_rec/git
+  else
+    Unite file_rec/async
+  endif
+endfunction
+
 noremap <silent> ,b :Unite buffer<CR>
 noremap <silent> ,h :Unite file_mru<CR>
-noremap <silent> ,f :Unite file_rec<CR>
+noremap <silent> ,f :<C-u>call DispatchUniteFileRecAsyncOrGit()<CR>
 noremap <silent> ,e :VimFilerExplore<CR>
 
 " grep検索
@@ -125,9 +134,11 @@ set noswapfile
 if has('win32') || has('wind64')
   set directory=~/vimfiles/tmp
   set backupdir=~/vimfiles/tmp
+  set undodir=~/vimfiles/tmp
 else
   set directory=~/.vim/tmp
   set backupdir=~/.vim/tmp
+  set undodir=~/.vim/tmp
 endif
 
 " エンコード

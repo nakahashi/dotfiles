@@ -16,7 +16,7 @@ if has('win64')
 elseif has('win32')
   set guifont=Ricty_Diminished:h12:cSHIFTJIS
 elseif has('mac')
-  set guifont=RictyDiminished-Regular:h14
+  set guifont=RictyDiminished-Regular:h15
 endif
 
 " メニュー文字化け対策
