@@ -1,0 +1,10 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	editor = vim
+[alias]
+	co = checkout
+	st = status
+	br = branch
