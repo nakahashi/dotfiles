@@ -213,3 +213,10 @@ nnoremap <C-l> :noh<CR>
 " 次のバッファ
 noremap <C-N> :bn<CR>
 
+" 拡張子ごとの設定
+augroup fileTypeSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.txt setlocal wrap
+    autocmd BufNewFile,BufRead *.md setlocal wrap
+augroup END
+
