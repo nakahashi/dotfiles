@@ -9,4 +9,4 @@ source $ZDOTDIR/zsh-completions.zsh
 source $ZDOTDIR/dev.zsh
 
 # plugins
-plugins=(git ruby osx brew rails emoji-clock)
+plugins=(git ruby macos brew rails emoji-clock)

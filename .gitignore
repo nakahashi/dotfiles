@@ -151,3 +151,4 @@ $RECYCLE.BIN/
 
 # zsh
 .zcompdump*
+.zsh_sessions*
