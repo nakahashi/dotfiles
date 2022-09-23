@@ -11,12 +11,12 @@ colorscheme summerfruit256
 
 " フォント
 if has('win64')
-  set guifont=Ricty_Diminished:h11:cSHIFTJIS
+  set guifont=Cica:h15:cSHIFTJIS
   set renderoptions=type:directx,renmode:5
 elseif has('win32')
-  set guifont=Ricty_Diminished:h12:cSHIFTJIS
+  set guifont=Cica:h15:cSHIFTJIS
 elseif has('mac')
-  set guifont=RictyDiminished-Regular:h15
+  set guifont=Cica:h15
 endif
 
 " メニュー文字化け対策
