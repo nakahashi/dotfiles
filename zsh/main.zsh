@@ -24,6 +24,7 @@ esac
 # alias
 alias mkdir='mkdir -p'
 alias sudo='sudo '
+alias relogin='exec $SHELL -l'
 
 # history
 HISTFILE=~/.zsh_history
@@ -44,4 +45,3 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt hist_reduce_blanks
 setopt extended_glob
-
