@@ -40,6 +40,9 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'kylef/apiblueprint.vim'
 Plug 'joker1007/vim-markdown-quote-syntax'
 
+" IMEコントロール"
+Plug 'brglng/vim-im-select'
+
 call plug#end()
 
 ""
@@ -112,6 +115,13 @@ let g:syntastic_ruby_checkers = ['rubocop']
 
 ""
 " 動作設定
+
+""
+" IMEコントロール
+let g:im_select_get_im_cmd = ['im-select']
+let g:im_select_default = 'com.google.inputmethod.Japanese.Roman'
+let g:im_select_command = '/usr/local/bin/im-select'
+
 ""
 " マウス
 set mouse=a
