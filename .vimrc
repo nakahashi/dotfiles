@@ -120,7 +120,7 @@ let g:syntastic_ruby_checkers = ['rubocop']
 " IMEコントロール
 let g:im_select_get_im_cmd = ['im-select']
 let g:im_select_default = 'com.google.inputmethod.Japanese.Roman'
-let g:im_select_command = '/usr/local/bin/im-select'
+let g:im_select_command = '/opt/homebrew/bin/im-select'
 
 ""
 " マウス
