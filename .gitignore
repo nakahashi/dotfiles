@@ -152,3 +152,5 @@ $RECYCLE.BIN/
 # zsh
 .zcompdump*
 .zsh_sessions*
+.zsh_history
+.zshrc.pre-oh-my-zsh

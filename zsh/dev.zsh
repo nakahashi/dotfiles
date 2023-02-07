@@ -1,6 +1,10 @@
 ####
 # dev.zsh
 
+# brew
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
@@ -24,6 +28,3 @@ export PATH=$PATH:$HOME/bin
 
 # gh
 eval "$(gh completion -s zsh)"
-
-# brew
-export PATH="/usr/local/opt/openssl/bin:$PATH"
