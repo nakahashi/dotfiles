@@ -8,6 +8,7 @@
 	co = checkout
 	st = status
 	br = branch
+	sw = switch
 [user]
 	name = nakahashi
 	email = nakahashi@users.noreply.github.com
