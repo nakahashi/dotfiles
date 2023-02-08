@@ -11,9 +11,9 @@ eval "$(rbenv init - zsh)"
 # https://qiita.com/kawashinji/items/e5d7d302f8e0e5e0f177
 export OPENSSL_CFLAGS=-Wno-error=implicit-function-declaration
 
-# ndenv
-export PATH="$HOME/.ndenv/bin:$PATH"
-eval "$(ndenv init -)"
+# nodenv
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
 
 # pyenv/virtualenv
 export PYENV_ROOT="$HOME/.pyenv"
