@@ -11,6 +11,7 @@ https://shinshin86.hateblo.jp/entry/2022/10/30/000000
 $ cd ~/
 $ git clone https://github.com/nakahashi/dotfiles.git
 $ dotfiles/install.sh
+$ brew bundle
 ```
 
 ### for Windows
