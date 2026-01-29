@@ -45,3 +45,13 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt hist_reduce_blanks
 setopt extended_glob
+
+# WSL
+# Homebrew for Linux
+if [ -d "/home/linuxbrew/.linuxbrew" ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+  alias open='explorer.exe'
+  alias pbcopy='clip.exe'        # Macのクリップボードコピーを再現
+  alias pbpaste='powershell.exe -command "Get-Clipboard"' # 貼り付けを再現
+fi

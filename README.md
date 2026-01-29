@@ -7,17 +7,21 @@ https://shinshin86.hateblo.jp/entry/2022/10/30/000000
 
 ### for Mac/Linux
 
-```sh
-$ cd ~/
+```zsh
+$ cd
 $ git clone https://github.com/nakahashi/dotfiles.git
 $ dotfiles/install.sh
 $ brew bundle
 ```
 
-### for Windows
+### for WSL on Windows
 
-```bat
-$ cd %HOMEPATH%
+```zsh
+$ cd
 $ git clone https://github.com/nakahashi/dotfiles.git
-$ dotfiles\install.cmd
+$ ./install-win-apps.sh
+$ ./install-win-shell.sh
+# brewインストール
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+$ brew bundle
 ```
