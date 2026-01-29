@@ -19,8 +19,8 @@ $ brew bundle
 ```zsh
 $ cd
 $ git clone https://github.com/nakahashi/dotfiles.git
-$ ./install-win-apps.sh
-$ ./install-win-shell.sh
+$ dotfiles/install-win-apps.sh
+$ dotfiles/install-win-shell.sh
 # brewインストール
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 $ brew bundle
