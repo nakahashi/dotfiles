@@ -2,8 +2,8 @@
 # dev.zsh
 
 # brew
-export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"

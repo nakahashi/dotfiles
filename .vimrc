@@ -39,6 +39,7 @@ Plug 'slim-template/vim-slim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'kylef/apiblueprint.vim'
 Plug 'joker1007/vim-markdown-quote-syntax'
+Plug 'plasticboy/vim-markdown'
 
 " IMEコントロール"
 Plug 'brglng/vim-im-select'

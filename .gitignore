@@ -1,4 +1,6 @@
 .local.zsh
+.vscode
+.ruby-lsp
 
 # Created by https://www.gitignore.io/api/vim,macos,linux,windows,jetbrains,visualstudiocode
 
