@@ -12,3 +12,5 @@
 [user]
 	name = nakahashi
 	email = nakahashi@users.noreply.github.com
+[pull]
+	rebase = true
