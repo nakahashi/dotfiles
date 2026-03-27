@@ -2,9 +2,7 @@ brew "gh"
 brew "jq"
 brew "fzf"
 
-brew "rbenv"
-brew "nodenv"
-brew "pyenv"
+brew "mise"
 brew "direnv"
 
 if OS.mac?
