@@ -8,4 +8,5 @@ brew "direnv"
 if OS.mac?
   cask "visual-studio-code"
   cask "font-cica"
+  cask "ghostty"
 end

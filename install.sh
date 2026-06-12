@@ -9,4 +9,5 @@ ln -sf ~/dotfiles/vim/commands.md ~/.vim-commands.md
 ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/zsh/.zshenv ~/.zshenv
 ln -sf ~/dotfiles/Brewfile ~/Brewfile
+ln -sf ~/dotfiles/ghostty/config ~/.config/ghostty/config
 mkdir -p .vim/tmp
