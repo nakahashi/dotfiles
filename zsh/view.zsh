@@ -1,9 +1,6 @@
 ####
 # view.zsh
 
-# theme
-ZSH_THEME="robbyrussell"
-
 # color
 autoload -Uz colors
 colors
@@ -33,7 +30,11 @@ function vcs_echo {
   PROMPT_VCS="%{$color%}(%{$branch%})%{$reset_color%}"
   PROMPT_VCS=$(echo "$PROMPT_VCS" | sed -e s/@/"%F{yellow}@%f%{$color%}"/)
 }
-precmd() { vcs_echo }
+precmd() {
+  vcs_echo
+  # Ghostty のタブタイトルをカレントディレクトリに設定
+  print -Pn "\e]2;%~\a"
+}
 PROMPT='%F{yellow}[%~]%f ${PROMPT_VCS}%(?.$.%F{red}$%f) '
 setopt transient_rprompt
 
