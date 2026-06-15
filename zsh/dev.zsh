@@ -16,4 +16,4 @@ eval "$(gh completion -s zsh)"
 
 # ghostty
 # Ctrl+m で改行
-bindkey '9;5u' accept-line
+bindkey $'\e[109;5u' accept-line
