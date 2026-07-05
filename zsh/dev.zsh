@@ -16,4 +16,8 @@ eval "$(gh completion -s zsh)"
 
 # ghostty
 # Ctrl+m で改行
-bindkey $'\e[109;5u' accept-line
+bindkey '9;5u' accept-line
+
+# claude code入れたときに追加
+export PATH="$HOME/.local/bin:$PATH"
+export PATH=/opt/homebrew/share/google-cloud-sdk/bin:"$PATH"
