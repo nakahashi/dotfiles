@@ -11,8 +11,14 @@ eval "$(direnv hook zsh)"
 # embulk
 export PATH=$PATH:$HOME/bin
 
-# gh
-eval "$(gh completion -s zsh)"
+# gh (キャッシュして高速化)
+_GH_COMPLETION_CACHE="$HOME/.cache/zsh/gh_completion.zsh"
+if [[ ! -f "$_GH_COMPLETION_CACHE" ]] || [[ $(command -v gh) -nt "$_GH_COMPLETION_CACHE" ]]; then
+  mkdir -p "$(dirname $_GH_COMPLETION_CACHE)"
+  gh completion -s zsh >"$_GH_COMPLETION_CACHE" 2>/dev/null
+fi
+[[ -f "$_GH_COMPLETION_CACHE" ]] && source "$_GH_COMPLETION_CACHE"
+unset _GH_COMPLETION_CACHE
 
 # ghostty
 # Ctrl+m で改行
