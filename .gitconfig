@@ -13,4 +13,5 @@
 	name = nakahashi
 	email = nakahashi@users.noreply.github.com
 [pull]
+	ff = only
 	rebase = true
