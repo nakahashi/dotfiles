@@ -4,3 +4,6 @@ font-family = cica
 font-size = 17
 window-padding-x = 10
 window-padding-y = 10
+
+# Ctrl+Mをキャリッジリターン(\r)として送信する（従来の端末と同じ挙動）
+keybind = ctrl+m=text:\r
