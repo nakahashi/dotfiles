@@ -12,3 +12,5 @@ ln -sf ~/dotfiles/Brewfile ~/Brewfile
 mkdir -p ~/.config/ghostty
 ln -sf ~/dotfiles/ghostty/config ~/.config/ghostty/config
 mkdir -p .vim/tmp
+mkdir -p ~/.config/nvim
+ln -sf ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
